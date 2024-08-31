@@ -7,7 +7,13 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+
+#Inherit emulated_storage properties
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Inherit userspace reboot properties
+$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
@@ -22,8 +28,3 @@ PRODUCT_MODEL := Infinix X6711
 PRODUCT_MANUFACTURER := infinix
 
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="vnd_x6711u_h333-user 12 SP1A.210812.016 650148 release-keys"
-
-BUILD_FINGERPRINT := Infinix/X6711-GL/X6711:12/SP1A.210812.016/240701V600:user/release-keys
