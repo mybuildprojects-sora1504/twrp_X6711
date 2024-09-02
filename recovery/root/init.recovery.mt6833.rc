@@ -9,8 +9,10 @@ on init
 on boot
     start boot-hal-1-2
     start health-hal-2-1
-    setprop sys.usb.controller "11201000.usb0"
-
+    setprop sys.usb.controller "musb-hdrc"
+on fs
+    property:ro.debuggable=0
+    start adbd
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
     symlink /dev/block/sda /dev/block/mmcblk0boot0
