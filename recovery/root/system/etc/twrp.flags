@@ -22,7 +22,7 @@
 /persistent               emmc      /dev/block/by-name/frp                                 flags=display=Persistent;backup=1
 /nvram                    emmc      /dev/block/by-name/nvram                               flags=display=NVRam;backup=1
 /tranfs                   ext4      /dev/block/by-name/tranfs                              flags=display=TranFS;backup=1
-
+/system                   ext4      /dev/block/by-name/system
 # Extra
 /para                     emmc      /dev/block/by-name/para
 /proinfo                  emmc      /dev/block/by-name/proinfo
