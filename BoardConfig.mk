@@ -164,6 +164,8 @@ TW_INCLUDE_TZDATA := true
 TW_EXCLUDE_APEX := true
 TW_HAS_MTP := true
 TW_HAS_NO_RECOVERY_PARTITION := true
+
+# Tools
 TW_INCLUDE_LPTOOLS := true
 
 # Vendor Boot
